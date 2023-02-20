@@ -5,8 +5,6 @@ The tool first constructs two data frames from the input files and then merges t
 
 The application is written in R and can be run from the command line. The input files should be tab-separated text files with the gene ID in the first column and the read count in the second column. The output file will be a tab-separated text file with the gene ID in the first column and the summed read count in the second column.
 
-This tool is useful for combining HTSeqCount files from different samples or conditions to facilitate downstream analysis of gene expression.
-
 # Use case
 This application was developed to merge two HTSeqCount files generated from RNA-seq analysis, to obtain a merged output file that can be used for downstream differential expression analysis. In RNA-seq analysis, raw reads from a sample are first trimmed, filtered, and mapped to a reference genome or transcriptome, and then the mapped reads are counted per gene using a tool such as HTSeq. However, if there are multiple fastq files per sample, HTSeqCount files will be generated separately for each fastq file. Thus, merging these HTSeqCount files is a necessary step to combine the gene counts for each sample, which can then be used for differential expression analysis.
 

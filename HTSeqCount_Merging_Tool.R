@@ -30,6 +30,14 @@ if (!file.exists(pathB)) {
   stop(paste("The file", pathB, "does not exists."))
 }
 
+if (!endsWith(pathA, ".txt")) {
+  stop(paste("The file", pathA, "does not have the .txt extension."))
+}
+
+if (!endsWith(pathB, ".txt")) {
+  stop(paste("The file", pathB, "does not have the .txt extension."))
+}
+
 outpath <- sub(pattern = ".txt", replacement = "_merged.txt", x = pathA)
 
 ###################

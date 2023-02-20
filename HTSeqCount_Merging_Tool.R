@@ -91,7 +91,8 @@ sorted_df <- merged_df[match(index, merged_df$V1), ]
 # Check as output
 #################
 
-print("Check:\n------")
+print("Check:")
+print("------")
 print(paste("Amount of reads for", df$V1[1], "[infile1]:", df$V2[1]))
 print(paste("Amount of reads for", df2$V1[1], "[infile2]:", df2$V2[1]))
 print(paste("Amount of reads for", sorted_df$V1[1], "[outfile]:", sorted_df$Count[1]))
@@ -101,4 +102,4 @@ print(paste("Amount of reads for", sorted_df$V1[1], "[outfile]:", sorted_df$Coun
 ########################
 
 write.table(x = sorted_df, file = outpath, sep = "\t", row.names = F, col.names = F)
-print("\nOutput file has been written.")
+print("Output file has been written.")

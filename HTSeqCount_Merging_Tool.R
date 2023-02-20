@@ -1,7 +1,7 @@
 #####################################################################################
 # Author: Mathias Verbeke
 # Date of creation: 2023/02/20
-# Usage: Rscript CountMergingScript.R file1 file2
+# Usage: Rscript HTSeqCount_Merging_Tool.R file1 file2
 # Summary: This R script takes two HTSeqCount files as input and merges them based 
 # on a shared gene_id field. The script first constructs two data frames from the 
 # input files and then merges them into a new data frame using the gene_id field 
@@ -16,7 +16,7 @@
 args <- commandArgs(trailingOnly = TRUE)
 
 if (length(args) != 2) {
-  stop("Usage: Rscript CountMergingScript.R file1 file2")
+  stop("Usage: Rscript HTSeqCount_Merging_Tool.R file1 file2")
 }
 
 pathA <- args[1]

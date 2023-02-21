@@ -73,14 +73,11 @@ merged_df <- merge(df, df2, by = "V1") # Merged using the column V1 as common co
 
 count <- apply(merged_df[, c(2,3)], 1, sum)
 
-################################
+##################################
 # Adding count to merged dataframe
 ##################################
 
-merged_df$Count <- count 
-
-
-merged_df[merged_df$V1 == "1433b",] # Check
+merged_df$Count <- count
 
 ##################################################
 # Dropping the 2 first columns with numeric fields

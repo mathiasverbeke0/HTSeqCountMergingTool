@@ -51,7 +51,11 @@ df2 <- read.table(file = pathB, header = F, sep = "\t")
 # Checking the dimensions
 #########################
 
-if (dim(df) != dim(df2)){
+if (dim(df)[1] != dim(df2)[1]){
+  stop("The dimensions of (rows x cols) differ between files.")
+}
+
+if (dim(df)[2] != dim(df2)[2]){
   stop("The dimensions of (rows x cols) differ between files.")
 }
 
